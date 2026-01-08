@@ -1,148 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-
+/* Main Section */
 .about-section {
-  width: 100vw;
+  padding: 80px 8%;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #1e3a8a, #334155);
-  background-size: 300% 300%;
-  animation: gradientMove 20s ease infinite;
-  font-family: 'Caprasimo', cursive;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 1rem;
-  overflow-x: hidden;
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.about-content-wrapper {
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
   align-items: center;
 }
 
-/* Shared info box */
-.info-box {
+/* Container */
+.about-container {
   width: 100%;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 1.25rem;
-  padding: 2rem;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  animation: popIn 1.5s ease forwards;
-  opacity: 0;
-  transform: scale(0.95);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
-.skills-box {
-  animation-delay: 0.2s;
+/* Cards */
+.about-card {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.experience-box {
-  animation-delay: 0.5s;
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(56, 189, 248, 0.25);
 }
 
-/* Title */
-.section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: #e0f2fe;
-  margin-bottom: 1rem;
-  text-align: center;
-  animation: fadeInDown 1s ease-out forwards;
-  opacity: 0;
-}
-
-/* Description text */
-.section-content {
-  font-size: 1.1rem;
-  color: #cbd5e1;
-  line-height: 1.8;
-  text-align: justify;
-  animation: fadeInUp 1.3s ease-out forwards;
-  opacity: 0;
-  margin-top: 1rem;
-}
-
-/* Icons */
-.section-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.section-icons i,
-.section-icons svg {
-  font-size: 2.5rem;
+/* Titles */
+.about-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
   color: #38bdf8;
-  transition: transform 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Text */
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 25px;
+}
+
+/* Skill Icons */
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.skills-icons svg {
+  font-size: 1.9rem;
+  color: #9ca3af;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.section-icons i:hover,
-.section-icons svg:hover {
-  transform: scale(1.2);
-  color: #0ea5e9;
+.skills-icons svg:hover {
+  color: #38bdf8;
+  transform: scale(1.25) rotate(3deg);
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  0% {
-    transform: translateY(-25px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(25px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes popIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .section-content {
-    font-size: 1rem;
-    padding: 0 0.5rem;
+  .about-section {
+    padding: 60px 6%;
   }
 
-  .section-icons {
-    gap: 1rem;
+  .about-title {
+    font-size: 1.7rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 50px 5%;
+  }
+
+  .about-card {
+    padding: 25px;
+  }
+
+  .skills-icons {
+    justify-content: center;
   }
 }

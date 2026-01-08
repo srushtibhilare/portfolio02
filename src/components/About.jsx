@@ -1,46 +1,56 @@
-import React from 'react';
-import './About.css';
+import React from "react";
+import "./About.css";
 import {
   FaReact,
   FaNodeJs,
   FaHtml5,
   FaCss3Alt,
   FaPython,
-  FaCuttlefish, // for C/C++
-  FaDatabase
-} from 'react-icons/fa';
+  FaCuttlefish,
+  FaDatabase,
+} from "react-icons/fa";
 
-export default function About() {
+const About = () => {
   return (
     <section className="about-section">
-      <div className="about-content-wrapper">
+      <div className="about-container">
 
-        {/* Skills */}
-        <div className="info-box skills-box">
-          <h2 className="section-title">Skills</h2>
-          <p className="section-content">
-            I’m passionate about programming and problem solving. My technical stack includes web development, DSA, and Python libraries. I love building interactive and modern web apps.
+        {/* Skills Section */}
+        <div className="about-card">
+          <h2 className="about-title">Skills</h2>
+          <p className="about-text">
+            I have a strong interest in programming, problem-solving, and data-driven
+            development. My skill set includes web technologies, data structures,
+            and Python-based data analysis. I enjoy building scalable, responsive,
+            and user-friendly applications.
           </p>
-          <div className="section-icons">
-            <FaHtml5 title="HTML" />
-            <FaCss3Alt title="CSS" />
+
+          <div className="skills-icons">
+            <FaHtml5 title="HTML5" />
+            <FaCss3Alt title="CSS3" />
             <FaReact title="React.js" />
             <FaNodeJs title="Node.js" />
             <FaPython title="Python & Libraries" />
-            <FaCuttlefish title="C/C++ for DSA" />
-            <FaDatabase title="MongoDB" />
+            <FaCuttlefish title="C/C++ (DSA)" />
+            <FaDatabase title="Databases (MongoDB / SQL)" />
           </div>
         </div>
 
-        {/* Experience */}
-        <div className="info-box experience-box">
-          <h2 className="section-title">Experience</h2>
-          <p className="section-content">
-            I've worked on MERN stack projects, implemented RESTful APIs, and integrated Python tools like NumPy, Pandas, and Matplotlib. I solve DSA problems using C++ and have hands-on experience with real-world project building and UI design.
+        {/* Experience Section */}
+        <div className="about-card">
+          <h2 className="about-title">Experience</h2>
+          <p className="about-text">
+            I have hands-on experience working with MERN stack applications,
+            developing RESTful APIs, and integrating backend services with
+            frontend interfaces. I have also worked with Python libraries such as
+            NumPy, Pandas, and Matplotlib for data analysis and visualization,
+            along with solving DSA problems using C++.
           </p>
         </div>
 
       </div>
     </section>
   );
-}
+};
+
+export default About;

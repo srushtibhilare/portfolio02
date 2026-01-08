@@ -6,18 +6,23 @@ const Hero = () => {
   return (
     <section className="hero-modern">
       <div className="hero-text">
-        <h2 className="fade-in">Hi Iam Srushti</h2>
-        <h4 className="fade-in-sub">Full-Stack Developer</h4>
+        <h2 className="fade-in">Hi, I’m Srushti Bhilare</h2>
+        <h4 className="fade-in-sub">Data Analyst Enthusiast</h4>
+
         <p className="fade-in-p">
-          I'm a passionate Full-Stack Developer with a strong eye for UI/UX design.
-          I build modern, responsive, and user-centric web applications using
-          technologies like React, Node.js, and MongoDB. I love turning ideas into
-          interactive experiences that users enjoy.
+          I am a Data Analyst skilled in Python, SQL, Excel, Power BI, and Tableau,
+          with strong experience in data cleaning, exploratory data analysis, and
+          dashboard development. I enjoy transforming raw data into meaningful
+          insights that support data-driven decision-making. My interests also
+          include machine learning, statistical analysis, and building analytical
+          solutions that solve real-world problems.
         </p>
+
         <div className="play-button fade-in-button">▶</div>
       </div>
+
       <div className="hero-image">
-        <img src={profile} alt="Srushti's Profile" />
+        <img src={profile} alt="Srushti Bhilare Profile" />
       </div>
     </section>
   );

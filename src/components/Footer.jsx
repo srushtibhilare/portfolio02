@@ -1,15 +1,18 @@
-import React from 'react';
-import './Footer.css';
-import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaHeart } from 'react-icons/fa';
-import { FiMail, FiArrowUp } from 'react-icons/fi';
+import React from "react";
+import "./Footer.css";
+import { motion } from "framer-motion";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaHeart,
+} from "react-icons/fa";
+import { FiMail, FiArrowUp } from "react-icons/fi";
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const socialLinks = [
@@ -17,40 +20,35 @@ export default function Footer() {
     { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/srushti-bhilare/", name: "LinkedIn" },
     { icon: <FaTwitter />, url: "https://twitter.com/yourhandle", name: "Twitter" },
     { icon: <FaInstagram />, url: "https://instagram.com/yourprofile", name: "Instagram" },
-  { 
-    icon: <FiMail />, 
-    url: "mailto:srushti29bhilare@gmail.com", 
-    name: "Email" 
-  }
+    { icon: <FiMail />, url: "mailto:srushti29bhilare@gmail.com", name: "Email" },
   ];
 
   const footerVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
-    <motion.footer 
+    <motion.footer
       className="footer"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true }}
       variants={footerVariants}
     >
       <div className="footer-container">
         <div className="footer-content">
+          {/* Logo */}
           <div className="footer-logo">
             <h3>Srushti Bhilare</h3>
             <p>Full Stack Developer</p>
           </div>
 
+          {/* Links */}
           <div className="footer-links">
             <div className="links-column">
               <h4>Quick Links</h4>
@@ -65,14 +63,14 @@ export default function Footer() {
             <div className="links-column">
               <h4>Resources</h4>
               <ul>
-                <li><a href="/blog">Blog</a></li>
                 <li><a href="/resume">Resume</a></li>
                 <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/github">GitHub</a></li>
+                <li><a href="https://github.com/srushtibhilare">GitHub</a></li>
               </ul>
             </div>
           </div>
 
+          {/* Social */}
           <div className="footer-social">
             <h4>Connect With Me</h4>
             <div className="social-icons">
@@ -83,8 +81,8 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon"
-                  whileHover={{ y: -5, scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ y: -4, scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                   aria-label={link.name}
                 >
                   {link.icon}
@@ -94,15 +92,16 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom */}
         <div className="footer-bottom">
           <p>
-            &copy; {new Date().getFullYear()} Srushti Bhilare. All rights reserved.
+            © {new Date().getFullYear()} Srushti Bhilare. All rights reserved.
             <span className="made-with">
               Made with <FaHeart className="heart-icon" /> in India
             </span>
           </p>
 
-          <motion.button 
+          <motion.button
             className="back-to-top"
             onClick={scrollToTop}
             whileHover={{ y: -3 }}
