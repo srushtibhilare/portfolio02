@@ -1,31 +1,72 @@
-import React from "react";
 import "./Hero.css";
-import profile from "../assets/image.jpg";
+import profileImg from "../assets/image.jpg";
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section className="hero-modern">
-      <div className="hero-text">
-        <h2 className="fade-in">Hi, I’m Srushti Bhilare</h2>
-        <h4 className="fade-in-sub">Data Analyst Enthusiast</h4>
-
-        <p className="fade-in-p">
-          I am a Data Analyst skilled in Python, SQL, Excel, Power BI, and Tableau,
-          with strong experience in data cleaning, exploratory data analysis, and
-          dashboard development. I enjoy transforming raw data into meaningful
-          insights that support data-driven decision-making. My interests also
-          include machine learning, statistical analysis, and building analytical
-          solutions that solve real-world problems.
-        </p>
-
-        <div className="play-button fade-in-button">▶</div>
+    <section className="hero-modern" id="home">
+      {/* Animation Background */}
+      <div className="animation-container">
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        
+        <div className="data-viz-bg">
+          <div className="line-chart"></div>
+          <div className="pie-chart"></div>
+          <div className="bar-chart">
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+        </div>
       </div>
 
+      {/* Interactive particles for image */}
+      <div className="image-particles">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
+
+      {/* LEFT CONTENT */}
+      <div className="hero-text">
+        <h2 className="fade-in">
+          Hi, I'm <span>Srushti</span> Bhilare
+        </h2>
+
+        <h4 className="fade-in-sub">
+          Data Analyst • AI & Machine Learning Enthusiast
+        </h4>
+
+        <p className="fade-in-p">
+          I transform raw data into meaningful stories that drive decisions.
+          Using <em>Python</em>, <em>SQL</em>, <em>Power BI</em>, and{" "}
+          <em>Machine Learning</em>, I uncover patterns, predict outcomes, and
+          design analytics solutions that answer not just
+          <em> what happened</em>, but <em>what will happen next</em>.
+        </p>
+
+        <div className="hero-buttons fade-in-button">
+          <a href="#projects" className="btn-primary">
+            See My Work
+          </a>
+          <a href="#contact" className="btn-secondary">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+
+      {/* RIGHT IMAGE */}
       <div className="hero-image">
-        <img src={profile} alt="Srushti Bhilare Profile" />
+        <img src={profileImg} alt="Srushti Bhilare" />
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default Home;

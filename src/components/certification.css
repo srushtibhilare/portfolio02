@@ -1,0 +1,64 @@
+.certifications-section {
+  padding: 60px 40px;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.cert-title {
+  text-align: center;
+  font-size: 28px;
+  color: #38bdf8;
+  margin-bottom: 40px;
+}
+
+.cert-block {
+  margin-bottom: 40px;
+}
+
+.cert-swiper {
+  padding-bottom: 30px;
+}
+
+.cert-card {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 16px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Swiper arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #38bdf8;
+}
+
+/* Profile links */
+.profile-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.profile-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.profile-links a:hover {
+  border-color: #38bdf8;
+}
