@@ -276,7 +276,7 @@ export default function Footer() {
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <a
-                    href="/SRUSHTI_BHILARE___RESUME.pdf"
+                    href="https://drive.google.com/file/d/12JT8H5rjCz5nhLsQfYN856rAv8baaO_M/view?usp=sharing"
                     download
                     className="resource-link"
                   >
